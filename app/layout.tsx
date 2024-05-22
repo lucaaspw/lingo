@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={font.className}>
+      <html lang="en" class="dark">
+      <body className={`${font.className} `}>
           <Toaster/>
           {children}
           </body>

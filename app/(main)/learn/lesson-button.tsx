@@ -79,7 +79,15 @@ export const LessonButton = ({ id, index, totalCount, locked, current, percentag
             </CircularProgressbarWithChildren>
           </div>
         ) : (
-          <div>Something wrong</div>
+          <Button
+                size="rounded"
+                variant={locked ? "locked" : "secondary" }
+                className="h-[70px] w-[70px] border-b-8"
+              >
+                <Icon
+                  className={cn("h-10 w-10", locked ? "fill-neutral-400 text-neutral-400 stroke-neutral-400" : "fill-primary-foreground text-primary-foreground", isCompleted && "fill-none stroke-[4]")}
+                />
+              </Button>
         )}
       </div>
     </Link>
